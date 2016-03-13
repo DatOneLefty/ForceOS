@@ -254,6 +254,12 @@ int nextf;
 	chdir(cmd);
 	nextf = 0;
 	}
+	else if ( nextf == 2) {
+	fopen(cmd, "w");
+	}
+	else if ( nextf == 3) {
+	mkdir(cmd);
+	}
 	else if (strcmp(cmd, "help") == 0) {
 	printf("HELP\n");
 	printf("CD [DIR]\n");
@@ -261,6 +267,8 @@ int nextf;
 	printf("STOP");
 	printf("TIME\n");
 	printf("INFO\n");
+	printf("MKFILE [NAME]\n");
+	printf("MKDIR [NAME]\n");
 	}
 	else if (strcmp(cmd, "time") == 0) {
 	time_t rawtime;
@@ -282,6 +290,12 @@ int nextf;
 	}
 	else if (strcmp(cmd, "cd") == 0) {
 	nextf = 1;
+	}
+	else if (strcmp(cmd, "mkfile") == 0) {
+	nextf = 2;
+	}
+	else if (strcmp(cmd, "mkdir") == 0) {
+	nextf = 3;
 	}
 	else {
 	CORE_CODE(205);
