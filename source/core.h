@@ -256,10 +256,11 @@ int nextf;
 	}
 	else if (strcmp(cmd, "help") == 0) {
 	printf("HELP\n");
-	printf("CD\n");
+	printf("CD [DIR]\n");
 	printf("HALT\n");
-	printf("DESKTOP\n");
-	printf("TUI_TEST\n");
+	printf("STOP");
+	printf("TIME\n");
+	printf("INFO\n");
 	}
 	else if (strcmp(cmd, "time") == 0) {
 	time_t rawtime;
@@ -278,10 +279,6 @@ int nextf;
 	printf("Codename: Cryptic Catfish\n");
 	printf("Compatablity: UNIX\n");
 	printf("Force CO. is not responsible for any damage done to your computer when using this software\n");
-	}
-	else if (strcmp(cmd, "trump") == 0) {
-	printf( KWHT"[" KRED "FAILED" KWHT "] continue to execute\n");
-	exit(-1);
 	}
 	else if (strcmp(cmd, "cd") == 0) {
 	nextf = 1;
