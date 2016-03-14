@@ -41,7 +41,7 @@ int cmdlimiter = 0;
 
 printf( KWHT"[  " KGRN "OK" KWHT "  ] *Shell \n");
     
-for(;;) {
+
 for(;;) {
 
    if (getcwd(cwd, sizeof(cwd)) != NULL) {
@@ -66,8 +66,7 @@ printf("No Dir>* ");
 	
 	CORE_CTRL(0, 0);
 	}
-	break;
 
 }
-}
+
 }

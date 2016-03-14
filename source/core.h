@@ -242,7 +242,7 @@ CORE_CTRL(0, 2);
 int CORE_CMDRUNNER(char * str) {
 int nextf;
   const char s[2] = " ";
-   char *cmd;
+   char * cmd;
    
    /* get the first token */
    cmd = strtok(str, s);
