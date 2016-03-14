@@ -36,22 +36,28 @@ char dir[1024];
 printf( KWHT"[  " KGRN "OK" KWHT "  ] nextfunction\n");
 int nextf;
 
+printf( KWHT"[  " KGRN "OK" KWHT "  ] nextfunction\n");
+int cmdlimiter = 0;
+
 printf( KWHT"[  " KGRN "OK" KWHT "  ] *Shell \n");
     
 for(;;) {
+for(;;) {
+
    if (getcwd(cwd, sizeof(cwd)) != NULL) {
        printf("%s>* ", cwd);
 } else {
 printf("No Dir>* ");
 }
+
 	scanf("%s", maxlen);
 	CORE_CMDRUNNER(maxlen);
+	
 	
     
 	if (strcmp(maxlen, "halt") == 0) {
     printf( KWHT"[  " KGRN "OK" KWHT "  ] halt system\n");
 	printf(KRED "The system will HALT NOW!\n");
-	haltcrypt();
 	exit(02);
 	}
         
@@ -60,6 +66,8 @@ printf("No Dir>* ");
 	
 	CORE_CTRL(0, 0);
 	}
+	break;
 
+}
 }
 }

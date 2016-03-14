@@ -297,6 +297,9 @@ int nextf;
 	else if (strcmp(cmd, "mkdir") == 0) {
 	nextf = 3;
 	}
+	else if (strcmp(cmd, "ls") == 0) {
+	system("ls");
+	}
 	else {
 	CORE_CODE(205);
 	}
