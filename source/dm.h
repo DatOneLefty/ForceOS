@@ -18,5 +18,5 @@ chdir("Downloads");
 printf("DOWNLOADING!!! DO NOT HALT THE PROGRAM NOW!\n");
 system("wget https://github.com/DatOneLefty/ForceOS/archive/master.zip");
 system("unzip master.zip");
-system("cp -fR ForceOS-master ../../ForceOS");
+system("cp -fR ForceOS-master/* ../../ForceOS");
 }
