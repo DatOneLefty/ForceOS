@@ -1,8 +1,5 @@
 # ForceOS
 The ForceOS C Edition with executables
 
-##Todo
-[ ] get a SOC Compiled version for Raspberry Pi
-[ ] add a dl command
-[ ] remove bugs from cd command
-[ ] package system
+##about
+ForceOS C Edition is like the Linux shell, but it has diffrent commands and can do less, but it is only in beta. A download system will be added soon, same with an update system that will reget the source, apply, then reboot

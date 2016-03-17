@@ -3,6 +3,7 @@
 #include<string.h>
 #include<time.h>
 #include<unistd.h>
+#include "source/dm.h"
 #include "source/conio.h"
 #include "source/core.h"
 #include "source/forcecrypt.h"

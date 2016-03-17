@@ -113,6 +113,9 @@ int nextf;
 	printf("[>>]");
 	}
 	}
+	else if ( nextf == 4) {
+	GET_FILE(cmd);
+	}
 	else if (strcmp(cmd, "help") == 0) {
 	printf("HELP\n");
 	printf("CD [DIR]\n");
@@ -120,8 +123,11 @@ int nextf;
 	printf("STOP");
 	printf("TIME\n");
 	printf("INFO\n");
+	printf("LS\n");
 	printf("MKFILE [NAME]\n");
 	printf("MKDIR [NAME]\n");
+	printf("DL [NAME]\n");
+	printf("UPDATE\n");
 	}
 	else if (strcmp(cmd, "time") == 0) {
 	time_t rawtime;
@@ -129,6 +135,10 @@ int nextf;
 	time ( &rawtime );
 	timeinfo = localtime ( &rawtime );
 	printf ( "Current System Time: %s", asctime (timeinfo) );
+	}
+	else if (strcmp(cmd, "update") == 0) {
+	GET_UPDATE();
+	printf("Complete. Reboot to apply update\n");
 	}
 	else if (strcmp(cmd, "info") == 0) {
 	printf("Force OS:\n");
@@ -152,6 +162,9 @@ int nextf;
 	}
 	else if (strcmp(cmd, "ls") == 0) {
 	system("ls");
+	}
+	else if (strcmp(cmd, "dl") == 0) {
+	nextf = 4;
 	}
 	else {
 	CORE_CODE(205);
