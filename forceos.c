@@ -10,11 +10,12 @@ int bstop() {
 aescryptd();
 }
 #include "source/line.h"
+#include "source/ForceX.h"
 #include "source/kbhit.h"
 
 //Running init
 
 
 int main() {
-    cmdline();
+    CMD_INIT();
 }
